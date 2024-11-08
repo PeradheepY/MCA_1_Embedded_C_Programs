@@ -6,8 +6,8 @@
  * the proprietary works, trade secrets, and copyrights of Embitel or its licensors.
  * For further information, contact community.ruggedboard.com / info@ruggedboard.com
  *
- * Application: 
- * Brief: 
+ * Application:
+ * Brief:
  * Author: Natarajan S  ( natarajan.s@ruggedboard.com )
  * Title: Program Manager / Trainner
  * Last Modified Date: 19.09.2022
@@ -20,7 +20,22 @@
 // Main Function
 int main()
 {
-     
+     char name[50];
+     char rollNo[10];
+     float cgpa;
+
+     printf("Enter Your Name  : ");
+     scanf("%s", name);
+
+     printf("Enter Your RollNo: ");
+     scanf("%s", rollNo);
+
+     printf("Enter Your CGPA  : ");
+     scanf("%f", &cgpa);
+
+     printf("\nName  : %s\n", name);
+     printf("RollNo: %s\n", rollNo);
+     printf("CGPA  : %.1f\n", cgpa);
      return 0;
 }
 
