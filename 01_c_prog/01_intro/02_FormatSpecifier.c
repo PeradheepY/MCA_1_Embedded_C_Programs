@@ -6,8 +6,8 @@
  * the proprietary works, trade secrets, and copyrights of Embitel or its licensors.
  * For further information, contact community.ruggedboard.com / info@ruggedboard.com
  *
- * Application: 
- * Brief: 
+ * Application:
+ * Brief:
  * Author: Natarajan S  ( natarajan.s@ruggedboard.com )
  * Title: Program Manager / Trainner
  * Last Modified Date: 19.09.2022
@@ -20,7 +20,17 @@
 // Main Function
 int main()
 {
-     
+     int integer = 123456;
+     char character = 'A';
+     float floating = 3.2f;
+     double double_num = 987.123456;
+     char string[] = "RuggedBoard";
+
+     printf("integer is : %d\n", integer);
+     printf("character is : %c\n", character);
+     printf("float is : %.1f\n", floating);
+     printf("double is : %.6lf\n", double_num);
+     printf("string is : %s\n", string);
      return 0;
 }
 
