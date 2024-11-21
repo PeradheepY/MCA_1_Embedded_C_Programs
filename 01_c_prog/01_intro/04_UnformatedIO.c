@@ -6,22 +6,29 @@
  * the proprietary works, trade secrets, and copyrights of Embitel or its licensors.
  * For further information, contact community.ruggedboard.com / info@ruggedboard.com
  *
- * Application: 
- * Brief: 
+ * Application:
+ * Brief:
  * Author: Natarajan S  ( natarajan.s@ruggedboard.com )
  * Title: Program Manager / Trainner
  * Last Modified Date: 19.09.2022
  *
 /*********************************************************************************************/
 
-// Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    char ch;
+    printf("Enter Characters to display:\n");
+
+    // Display entered characters immediately
+    while ((ch = getchar()) != '\n') {
+        putchar(ch); 
+    }
+
+    printf("\nEntered Characters are as above.\n");
+
+    return 0;
 }
+
 
 // Program End
