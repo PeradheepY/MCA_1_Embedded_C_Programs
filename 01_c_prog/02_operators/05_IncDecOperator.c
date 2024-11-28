@@ -17,11 +17,15 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int a = 10;  
+
+    printf("Incremented Value of a: %d\n", ++a);  
+
+    printf("Decremented Value of a: %d\n", --a);  
+
+    return 0;
 }
+
 
 // Program End

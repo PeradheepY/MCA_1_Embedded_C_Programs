@@ -17,11 +17,18 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int a = 50, b = 5; 
+
+    printf("Binary OR Operator of a and b is %d\n", a | b);   
+    printf("Binary AND Operator of a and b is %d\n", a & b);  
+    printf("Binary XOR Operator of a and b is %d\n", a ^ b);  
+    printf("Binary Ones Complement Operator of a is %d\n", ~a); 
+    printf("Binary Left Shift Operator of a is %d\n", a << 2);  
+    printf("Binary Right Shift Operator of a is %d\n", a >> 2); 
+
+    return 0;
 }
+
 
 // Program End

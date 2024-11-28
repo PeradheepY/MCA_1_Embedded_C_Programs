@@ -17,11 +17,23 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int a = 10, b = 15; 
+
+    // arithmetic operations
+    printf("Addition       : a+b = %d\n", a + b);
+    printf("Subtraction    : a-b = %d\n", a - b);
+    printf("Multiplication : a*b = %d\n", a * b);
+    printf("Division       : a/b = %d\n", a / b); 
+    printf("Modulo Division: %d\n", a % b);
+
+    // Performing Pre-increment and pre-decrement 
+    printf("Increment the value of a by 1  : %d\n", ++a); 
+    printf("Decremented the value of b by 1: %d\n", --b); 
+
+
+    return 0;
 }
+
 
 // Program End

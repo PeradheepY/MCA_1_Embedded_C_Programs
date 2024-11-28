@@ -17,11 +17,20 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int j = 6, t = 4;
+
+    // Relational Operators
+    
+    printf("6 == 4 is %d\n", (j == t));  
+    printf("6 > 4 is %d\n", (j > t));    
+    printf("6 < 4 is %d\n", (j < t));    
+    printf("6 != 4 is %d\n", (j != t));  
+    printf("6 >= 4 is %d\n", (j >= t));  
+    printf("6 <= 4 is %d\n", (j <= t));  
+
+    return 0;
 }
+
 
 // Program End

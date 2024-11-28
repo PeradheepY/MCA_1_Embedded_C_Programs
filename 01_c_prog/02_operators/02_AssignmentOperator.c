@@ -17,11 +17,30 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int result = 99; 
+
+    
+    printf("Value of result = %d\n", result);
+
+    
+    result += 99; 
+    printf("Value of result = %d\n", result);
+
+    
+    result -= 99; 
+    printf("Value of result = %d\n", result);
+
+    
+    result *= 99; 
+    printf("Value of result = %d\n", result);
+
+    
+    result /= 99; 
+    printf("Value of result = %d\n", result);
+
+    return 0;
 }
+
 
 // Program End
