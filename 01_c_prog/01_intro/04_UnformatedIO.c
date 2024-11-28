@@ -18,17 +18,24 @@
 
 int main() {
     char ch;
-    printf("Enter Characters to display:\n");
 
-    // Display entered characters immediately
-    while ((ch = getchar()) != '\n') {
-        putchar(ch); 
+    printf("Enter Characters to display (press Enter to finish):\n");
+
+    while (1) { // Infinite loop to keep reading characters
+        scanf("%c", &ch); // Read a single character
+
+        if (ch == '\n') { // Stop if Enter key (newline) is pressed
+            break;
+        }
+
+        printf("%c", ch); // Print the entered character
     }
 
     printf("\nEntered Characters are as above.\n");
 
     return 0;
 }
+
 
 
 // Program End
