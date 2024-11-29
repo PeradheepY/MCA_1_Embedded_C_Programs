@@ -17,11 +17,19 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int num = 10;
+
+    while (num <= 20) {
+        printf("num=%d\n", num);
+        if (num > 15) {
+            break; 
+        }
+        num++;
+    }
+
+    return 0;
 }
+
 
 // Program End
