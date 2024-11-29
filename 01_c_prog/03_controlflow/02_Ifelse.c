@@ -17,11 +17,19 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int number;
+
+    printf("Enter a number:\n");
+    scanf("%d", &number);
+
+    if (number > 20) {
+        printf("The number is Greater than 20.\n");
+    } else {
+        printf("The number is Lesser than 20.\n");
+    }
+
+    return 0;
 }
 
 // Program End

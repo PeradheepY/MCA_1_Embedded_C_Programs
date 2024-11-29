@@ -17,11 +17,91 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int a, b, c, d;
+
+    // Prompt the user to enter four numbers
+    printf("Enter the values of a, b, c, d: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    // Use if-else if ladder without using &&
+    if (a > b) {
+        if (a > c) {
+            if (a > d) {
+                printf("%d is the largest\n", a);
+            } else {
+                printf("%d is the largest\n", d);
+            }
+        } else {
+            if (c > d) {
+                printf("%d is the largest\n", c);
+            } else {
+                printf("%d is the largest\n", d);
+            }
+        }
+    } else {
+        if (b > c) {
+            if (b > d) {
+                printf("%d is the largest\n", b);
+            } else {
+                printf("%d is the largest\n", d);
+            }
+        } else {
+            if (c > d) {
+                printf("%d is the largest\n", c);
+            } else {
+                printf("%d is the largest\n", d);
+            }
+        }
+    }
+
+    return 0;
 }
 
+
 // Program End
+
+
+/***
+ * 
+ * 
+ * 
+ * 
+ * 
+another 
+int main() {
+    int a, b, c, d;
+    int largest;
+
+    // Prompt the user to enter four numbers
+    printf("Enter the values of a, b, c, d: ");
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    // Assume a is the largest initially
+    largest = a;
+
+    // Check if b is greater than the current largest
+    if (b > largest) {
+        largest = b;
+    }
+
+    // Check if c is greater than the current largest
+    if (c > largest) {
+        largest = c;
+    }
+
+    // Check if d is greater than the current largest
+    if (d > largest) {
+        largest = d;
+    }
+
+    // Output the largest number
+    printf("%d is the largest\n", largest);
+
+    return 0;
+}
+
+ * 
+ * 
+ * 
+ */
