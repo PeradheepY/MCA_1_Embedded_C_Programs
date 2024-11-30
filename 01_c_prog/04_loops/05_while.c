@@ -20,8 +20,12 @@
 // Main Function
 int main()
 {
-     
-     return 0;
+     int num = 10;
+
+     while (num <= 20) {
+        printf("num=%d\n", num);
+        num++;
+    }
 }
 
 // Program End

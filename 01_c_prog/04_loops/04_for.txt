@@ -1,6 +1,6 @@
 /***********************************************************************************
 Problem Statement:
-Write a simple c program to print number from 10 to 20 using do while loop.
+Write a simple c program to print number from 10 to 20 using for loop.
 
 Src File: for.c 
 Out File: for

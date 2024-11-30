@@ -14,14 +14,36 @@
  *
 /*********************************************************************************************/
 
-// Header File
-#include <stdio.h>
+
 
 // Main Function
-int main()
-{
-     
-     return 0;
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    start: // Label for goto statement
+    printf("Enter a number:\n");
+    scanf("%d", &num);
+
+    if (num % 2 == 0) {
+        printf("Given num is Even\n");
+    } else {
+        printf("Given num is Odd\n");
+    }
+
+    // Option to enter another number
+    char choice;
+    printf("Do you want to check another number? (y/n): ");
+    scanf(" %c", &choice); // Space before %c to consume any newline character
+
+    if (choice == 'y' || choice == 'Y') {
+        goto start; // Go back to the start label
+    } else {
+     printf("Exiting...\n");
+    }
+
+    return 0;
 }
 
 // Program End

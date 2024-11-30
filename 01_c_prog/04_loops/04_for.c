@@ -20,7 +20,14 @@
 // Main Function
 int main()
 {
-     
+     int num;
+
+     for(num=10; num<=20; num++){
+          
+          printf("num:%d\n", num);
+          
+         
+     }
      return 0;
 }
 
