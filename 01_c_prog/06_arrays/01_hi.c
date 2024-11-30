@@ -15,17 +15,19 @@
 /*********************************************************************************************/
 
 // Header File
+
 #include <stdio.h>
 
 int main() {
     char input[50];
-    char target[] = {'h', 'i', '\0'}; // Target word: "hi"
+    char target[] = {'h', 'i', '\0'}; 
     int i;
 
-    printf("Plz enter a str: ");
-    scanf("%s", input); // Read input until a space or newline
 
-    // Compare input with the target array and check if it's exactly "hi"
+    printf("enter the string: ");
+    scanf("%s", input); 
+
+    
     for (i = 0; target[i] != '\0'; i++) {
         if (input[i] != target[i]) {
             printf("not enter hi\n");
@@ -33,15 +35,19 @@ int main() {
         }
     }
 
-    // If input has extra characters
-    if (input[i] != '\0') {
-        printf("not enter hi\n");
-    } else {
+    // Check if input is exactly "hi" (not longer)
+    if (input[i] == '\0') {
         printf("Hello\n");
+    } else {
+        printf("not enter hi\n");
     }
 
     return 0;
 }
+
+
+
+
 
 
 
