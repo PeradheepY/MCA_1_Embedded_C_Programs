@@ -17,11 +17,34 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int num1, num2;
+
+    // Declare pointers for the numbers
+    int *ptr1, *ptr2;
+
+    // Input the numbers
+    printf("Pointer : Find the maximum number between two numbers :\n");
+    printf("------------------------------------------------------------\n");
+
+    printf("Input the first number : ");
+    scanf("%d", &num1);
+    printf("Input the second number : ");
+    scanf("%d", &num2);
+
+    // Point the pointers to the respective variables
+    ptr1 = &num1;
+    ptr2 = &num2;
+
+    // Find and print the maximum number using pointers
+    if (*ptr1 > *ptr2) {
+        printf("The maximum number is : %d\n", *ptr1);
+    } else {
+        printf("The maximum number is : %d\n", *ptr2);
+    }
+
+    return 0;
 }
+
 
 // Program End

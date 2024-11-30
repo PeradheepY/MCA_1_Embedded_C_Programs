@@ -17,11 +17,34 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int num1, num2, sum;
+
+    
+    int *ptr1, *ptr2, *ptr_sum;
+
+    
+    printf("Pointer : Add two numbers :\n");
+    printf("--------------------------------\n");
+
+    printf("Input the first number : ");
+    scanf("%d", &num1);
+    printf("Input the second number : ");
+    scanf("%d", &num2);
+
+    
+    ptr1 = &num1;
+    ptr2 = &num2;
+    ptr_sum = &sum;
+
+    
+    *ptr_sum = *ptr1 + *ptr2;
+
+    
+    printf("The sum of the entered numbers is : %d\n", *ptr_sum);
+
+    return 0;
 }
+
 
 // Program End

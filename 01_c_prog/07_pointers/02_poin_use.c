@@ -17,11 +17,49 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int m = 300;           
+    float fx = 300.6f;     
+    char cht = 'z';       
+
+    
+    int *ptr_m = &m;
+    float *ptr_fx = &fx;
+    char *ptr_cht = &cht;
+
+    printf("Pointer : Demonstrate the use of & and * operator :\n");
+    printf("--------------------------------------------------------\n");
+
+    
+    printf(" m = %d\n", m);
+    printf(" fx = %f\n", fx);
+    printf(" cht = %c\n", cht);
+
+    printf("\n Using & operator :\n");
+    printf("-----------------------\n");
+    printf(" address of m = %p\n", (void *)&m);
+    printf(" address of fx = %p\n", (void *)&fx);
+    printf(" address of cht = %p\n", (void *)&cht);
+
+    printf("\n Using & and * operator :\n");
+    printf("-----------------------------\n");
+    printf(" value at address of m = %d\n", *(&m));
+    printf(" value at address of fx = %f\n", *(&fx));
+    printf(" value at address of cht = %c\n", *(&cht));
+
+    printf("\n Using only pointer variable :\n");
+    printf("----------------------------------\n");
+    printf(" address of m = %p\n", (void *)ptr_m);
+    printf(" address of fx = %p\n", (void *)ptr_fx);
+    printf(" address of cht = %p\n", (void *)ptr_cht);
+
+    printf("\n Using only pointer operator :\n");
+    printf("----------------------------------\n");
+    printf(" value at address of m = %d\n", *ptr_m);
+    printf(" value at address of fx= %f\n", *ptr_fx);
+    printf(" value at address of cht= %c\n", *ptr_cht);
+
+    return 0;
 }
 
 // Program End

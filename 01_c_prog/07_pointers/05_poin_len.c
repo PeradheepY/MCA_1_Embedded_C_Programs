@@ -17,11 +17,34 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    char str[100];
+    char *ptr = str;  
+
+    
+    printf("Pointer : Calculate the length of the string :\n");
+    printf("---------------------------------------------------\n");
+
+    printf("Input a string : ");
+    fgets(str, sizeof(str), stdin);  // Approaching with scanf("%s", str) won't handle spaces in the string. 
+                                     // It stops reading at the first space, so we are using fgets() instead.
+
+    
+    int length = 0;
+
+    
+    while (*ptr != '\0') {
+        length++;
+        ptr++;  // Move the pointer to the next character
+    }
+
+   
+    printf("The length of the given string %s\n", str);
+    printf("is : %d\n", length);
+
+    return 0;
 }
+
+
 
 // Program End
