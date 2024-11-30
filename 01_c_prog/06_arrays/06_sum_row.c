@@ -17,11 +17,42 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    int rows, cols;
+
+    printf("Please enter rows and columns of the matrix: ");
+    scanf("%d %d", &rows, &cols);
+
+    int matrix[rows][cols]; 
+
+    // Input the matrix elements
+    printf("\t\"Enter matrix elements\"\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    // Print the matrix
+    printf("\t\"Given matrix is\"\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d\t", matrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Calculate and print the sum of each row
+    for (int i = 0; i < rows; i++) {
+        int sum = 0; 
+        for (int j = 0; j < cols; j++) {
+            sum += matrix[i][j]; 
+        }
+        printf("Sum of row %d is: %d\n", i + 1, sum);
+    }
+
+    return 0;
 }
+
 
 // Program End
