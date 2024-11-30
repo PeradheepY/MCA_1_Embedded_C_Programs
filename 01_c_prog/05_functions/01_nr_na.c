@@ -16,12 +16,16 @@
 
 // Header File
 #include <stdio.h>
-
-// Main Function
-int main()
-{
-     
-     return 0;
+void sum() {
+    int num1, num2;
+    printf("Enter 2 numbers:\n");
+    scanf("%d %d", &num1, &num2);
+    printf("sum = %d\n", num1 + num2);
 }
+int main() {
+    sum();
+    return 0;
+}
+
 
 // Program End
