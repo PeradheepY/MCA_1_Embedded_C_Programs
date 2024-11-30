@@ -17,11 +17,53 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+int main() {
+    char input[50];
+    char target[] = {'h', 'i', '\0'}; // Target word: "hi"
+    int i;
+
+    printf("Plz enter a str: ");
+    scanf("%s", input); // Read input until a space or newline
+
+    // Compare input with the target array and check if it's exactly "hi"
+    for (i = 0; target[i] != '\0'; i++) {
+        if (input[i] != target[i]) {
+            printf("not enter hi\n");
+            return 0; // Exit early if mismatch is found
+        }
+    }
+
+    // If input has extra characters
+    if (input[i] != '\0') {
+        printf("not enter hi\n");
+    } else {
+        printf("Hello\n");
+    }
+
+    return 0;
 }
 
+
+
 // Program End
+
+
+
+/***********************************************************************************
+ * int main() {
+    char input[50];
+    int i;
+
+    printf("Plz enter a str: ");
+    scanf("%s", input); // Read input until a space or newline
+
+    // Check if the input is exactly "hi"
+    if (input[0] == 'h' && input[1] == 'i' && input[2] == '\0') {
+        printf("Hello\n");
+    } else {
+        printf("not enter hi\n");
+    }
+
+    return 0;
+}
+ ******************************************************************************/
