@@ -16,12 +16,33 @@
 
 // Header File
 #include <stdio.h>
+#include <string.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Function to check if a string is a palindrome
+int is_palindrome(const char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - i - 1]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+// Main function
+int main() {
+    char str[100];
+    printf("Enter your string for palindrome: ");
+    scanf("%99s", str);
+
+    printf("Entered string is: %s\n", str);
+    if (is_palindrome(str)) {
+        printf("Given string is a palindrome\n");
+    } else {
+        printf("Not a palindrome\n");
+    }
+
+    return 0;
 }
 
 // Program End

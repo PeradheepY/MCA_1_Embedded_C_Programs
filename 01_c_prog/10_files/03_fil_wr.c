@@ -17,11 +17,50 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Main function
+int main() {
+    FILE *fptr;
+    char filename[100] = "test.txt";
+    char line[200];
+    int num_lines;
+
+    // Create and open file for writing
+    fptr = fopen(filename, "w");
+    if (fptr == NULL) {
+        printf("Error! Could not open file\n");
+        return 1;
+    }
+
+    // Input number of lines from user
+    printf("Write multiple lines in a text file and read the file:\n");
+    printf("------------------------------------------------------------\n");
+    printf("Input the number of lines to be written: ");
+    scanf("%d", &num_lines);
+    getchar(); // Consume newline character left by scanf
+
+    // Input lines from user and write to file
+    printf("\n:: The lines are ::\n");
+    for (int i = 0; i < num_lines; i++) {
+        fgets(line, sizeof(line), stdin);
+        fprintf(fptr, "%s", line);
+    }
+    fclose(fptr);
+
+    // Open file for reading
+    fptr = fopen(filename, "r");
+    if (fptr == NULL) {
+        printf("Error! Could not open file\n");
+        return 1;
+    }
+
+    // Read and display the content of the file
+    printf("\nThe content of the file %s is:\n\n", filename);
+    while (fgets(line, sizeof(line), fptr) != NULL) {
+        printf("%s", line);
+    }
+    fclose(fptr);
+
+    return 0;
 }
 
 // Program End

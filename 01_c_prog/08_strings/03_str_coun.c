@@ -16,12 +16,36 @@
 
 // Header File
 #include <stdio.h>
+#include <ctype.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Function to count vowels, consonants, and total alphabets
+void count_characters(const char *str, int *vowels, int *consonants, int *alphabets) {
+    *vowels = 0;
+    *consonants = 0;
+    *alphabets = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isalpha(str[i])) {
+            (*alphabets)++;
+            char ch = tolower(str[i]);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                (*vowels)++;
+            } else {
+                (*consonants)++;
+            }
+        }
+    }
+}
+
+// Main function
+int main() {
+    char str[] = "How are you";
+    int vowels, consonants, alphabets;
+    printf("The given string is: %s\n", str);
+    count_characters(str, &vowels, &consonants, &alphabets);
+    printf("Number of Alphabets in given string is: %d\n", alphabets);
+    printf("Number of vowels in given string is: %d\n", vowels);
+    printf("Number of consonants in given string is: %d\n", consonants);
+    return 0;
 }
 
 // Program End

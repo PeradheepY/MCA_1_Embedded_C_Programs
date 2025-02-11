@@ -17,11 +17,33 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Main function
+int main() {
+    FILE *fptr;
+    char filename[100];
+    char c;
+
+    // Input filename from user
+    printf("Read an existing file:\n");
+    printf("------------------------------\n");
+    printf("Input the filename to be opened: ");
+    scanf("%99s", filename);
+
+    // Open file for reading
+    fptr = fopen(filename, "r");
+    if (fptr == NULL) {
+        printf("Error! Could not open file\n");
+        return 1;
+    }
+
+    // Read and display the content of the file
+    printf("\nThe content of the file %s is:\n", filename);
+    while ((c = fgetc(fptr)) != EOF) {
+        putchar(c);
+    }
+    fclose(fptr);
+
+    return 0;
 }
 
 // Program End

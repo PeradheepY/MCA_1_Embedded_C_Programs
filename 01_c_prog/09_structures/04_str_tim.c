@@ -17,11 +17,61 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Structure to store time
+struct Time {
+    int hours;
+    int minutes;
+    int seconds;
+};
+
+// Function to calculate the difference between two time periods
+struct Time calculate_difference(struct Time start, struct Time stop) {
+    struct Time diff;
+
+    // Calculate seconds
+    if (stop.seconds > start.seconds) {
+        --start.minutes;
+        start.seconds += 60;
+    }
+    diff.seconds = start.seconds - stop.seconds;
+
+    // Calculate minutes
+    if (stop.minutes > start.minutes) {
+        --start.hours;
+        start.minutes += 60;
+    }
+    diff.minutes = start.minutes - stop.minutes;
+
+    // Calculate hours
+    diff.hours = start.hours - stop.hours;
+
+    return diff;
+}
+
+// Main function
+int main() {
+    struct Time start, stop, diff;
+
+    // Input start time
+    printf("Enter the start time.\n");
+    printf("Enter hours, minutes and seconds: ");
+    scanf("%d %d %d", &start.hours, &start.minutes, &start.seconds);
+
+    // Input stop time
+    printf("Enter the stop time.\n");
+    printf("Enter hours, minutes and seconds: ");
+    scanf("%d %d %d", &stop.hours, &stop.minutes, &stop.seconds);
+
+    // Calculate the difference
+    diff = calculate_difference(start, stop);
+
+    // Display the difference
+    printf("Time Difference: %d:%d:%d - %d:%d:%d = %d:%d:%d\n", 
+           start.hours, start.minutes, start.seconds, 
+           stop.hours, stop.minutes, stop.seconds, 
+           diff.hours, diff.minutes, diff.seconds);
+
+    return 0;
 }
 
 // Program End

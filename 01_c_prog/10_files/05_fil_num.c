@@ -17,11 +17,38 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Main function
+int main() {
+    FILE *fptr;
+    char filename[100];
+    char c;
+    int lines = 0;
+
+    // Input filename from user
+    printf("Read the file and count the number of lines:\n");
+    printf("--------------------------------------------------\n");
+    printf("Input the file name to be opened: ");
+    scanf("%99s", filename);
+
+    // Open file for reading
+    fptr = fopen(filename, "r");
+    if (fptr == NULL) {
+        printf("Error! Could not open file\n");
+        return 1;
+    }
+
+    // Count the number of lines in the file
+    while ((c = fgetc(fptr)) != EOF) {
+        if (c == '\n') {
+            lines++;
+        }
+    }
+    fclose(fptr);
+
+    // Display the number of lines
+    printf("The lines in the file %s are: %d\n", filename, lines);
+
+    return 0;
 }
 
 // Program End

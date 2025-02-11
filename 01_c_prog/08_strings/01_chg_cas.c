@@ -16,12 +16,27 @@
 
 // Header File
 #include <stdio.h>
+#include <ctype.h>  
 
-// Main Function
-int main()
-{
-     
-     return 0;
+
+void change_case(char *str) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isupper(str[i])) {  
+            str[i] = tolower(str[i]);  
+        } else if (islower(str[i])) {  
+            str[i] = toupper(str[i]); 
+        }
+    }
 }
+
+// Main function
+int main() {
+    char str[] = "PHYTEC";
+    printf("Original string: %s\n", str);
+    change_case(str);
+    printf("Changed case: %s\n", str);
+    return 0;
+}
+
 
 // Program End

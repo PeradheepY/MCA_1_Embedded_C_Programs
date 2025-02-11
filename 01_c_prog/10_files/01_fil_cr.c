@@ -17,11 +17,32 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Main function
+int main() {
+    FILE *fptr;
+    char filename[100] = "test.txt";
+    char sentence[200];
+
+    // Create and open file for writing
+    fptr = fopen(filename, "w");
+    if (fptr == NULL) {
+        printf("Error! Could not open file\n");
+        return 1;
+    }
+
+    // Input text from user
+    printf("Create a file (%s) and input text:\n", filename);
+    printf("----------------------------------------------\n");
+    printf("Input a sentence for the file: ");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    // Write text to file
+    fprintf(fptr, "%s", sentence);
+    fclose(fptr);
+
+    printf("\nThe file %s created successfully...!!\n", filename);
+
+    return 0;
 }
 
 // Program End

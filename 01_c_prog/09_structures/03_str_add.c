@@ -17,11 +17,41 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Structure to store complex number
+struct Complex {
+    float real;
+    float imag;
+};
+
+// Function to add two complex numbers
+struct Complex add_complex(struct Complex n1, struct Complex n2) {
+    struct Complex result;
+    result.real = n1.real + n2.real;
+    result.imag = n1.imag + n2.imag;
+    return result;
+}
+
+// Main function
+int main() {
+    struct Complex num1, num2, sum;
+
+    // Input first complex number
+    printf("For 1st complex number\n");
+    printf("Enter the real and imaginary parts: ");
+    scanf("%f %f", &num1.real, &num1.imag);
+
+    // Input second complex number
+    printf("For 2nd complex number\n");
+    printf("Enter the real and imaginary parts: ");
+    scanf("%f %f", &num2.real, &num2.imag);
+
+    // Add the two complex numbers
+    sum = add_complex(num1, num2);
+
+    // Display the sum of complex numbers
+    printf("Sum = %.1f + %.1fi\n", sum.real, sum.imag);
+
+    return 0;
 }
 
 // Program End

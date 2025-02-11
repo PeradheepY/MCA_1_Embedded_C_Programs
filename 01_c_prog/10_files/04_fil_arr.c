@@ -16,12 +16,42 @@
 
 // Header File
 #include <stdio.h>
+#include <stdlib.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Main function
+int main() {
+    FILE *fptr;
+    char filename[100];
+    char lines[100][200];
+    int i = 0;
+
+    // Input filename from user
+    printf("Read the file and store the lines into an array:\n");
+    printf("------------------------------------------------------\n");
+    printf("Input the filename to be opened: ");
+    scanf("%99s", filename);
+
+    // Open file for reading
+    fptr = fopen(filename, "r");
+    if (fptr == NULL) {
+        printf("Error! Could not open file\n");
+        return 1;
+    }
+
+    // Read lines from file and store into array
+    while (fgets(lines[i], sizeof(lines[i]), fptr) != NULL) {
+        lines[i][strcspn(lines[i], "\n")] = '\0'; // Remove newline character
+        i++;
+    }
+    fclose(fptr);
+
+    // Display the content of the array
+    printf("\nThe content of the file %s are:\n\n", filename);
+    for (int j = 0; j < i; j++) {
+        printf("%s\n", lines[j]);
+    }
+
+    return 0;
 }
 
 // Program End

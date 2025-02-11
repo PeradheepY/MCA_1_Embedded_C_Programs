@@ -17,11 +17,33 @@
 // Header File
 #include <stdio.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Structure to store student information
+struct Student {
+    char name[50];
+    int roll_number;
+    float marks;
+};
+
+// Main function
+int main() {
+    struct Student student;
+
+    // Input student information
+    printf("Enter information:\n");
+    printf("Enter name: ");
+    scanf("%49s", student.name);
+    printf("Enter roll number: ");
+    scanf("%d", &student.roll_number);
+    printf("Enter marks: ");
+    scanf("%f", &student.marks);
+
+    // Display student information
+    printf("Displaying Information:\n");
+    printf("Name: %s\n", student.name);
+    printf("Roll number: %d\n", student.roll_number);
+    printf("Marks: %.1f\n", student.marks);
+
+    return 0;
 }
 
 // Program End

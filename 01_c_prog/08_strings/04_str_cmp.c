@@ -16,12 +16,23 @@
 
 // Header File
 #include <stdio.h>
+#include <string.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Main function
+int main() {
+    char password[20];
+    const char correct_password[] = "danger";
+
+    printf("plzz Enter your Password :");
+    scanf("%19s", password);
+
+    if (strcmp(password, correct_password) == 0) {
+        printf("entered correct password\n");
+    } else {
+        printf("wrong password\n");
+    }
+
+    return 0;
 }
 
 // Program End

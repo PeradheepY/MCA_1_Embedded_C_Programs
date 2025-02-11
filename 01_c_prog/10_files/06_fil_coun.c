@@ -16,12 +16,46 @@
 
 // Header File
 #include <stdio.h>
+#include <ctype.h>
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Main function
+int main() {
+    FILE *fptr;
+    char filename[100];
+    char c;
+    int words = 0, characters = 0;
+    int in_word = 0;
+
+    // Input filename from user
+    printf("Count the number of words and characters in a file:\n");
+    printf("---------------------------------------------------------\n");
+    printf("Input the filename to be opened: ");
+    scanf("%99s", filename);
+
+    // Open file for reading
+    fptr = fopen(filename, "r");
+    if (fptr == NULL) {
+        printf("Error! Could not open file\n");
+        return 1;
+    }
+
+    // Count the number of words and characters in the file
+    while ((c = fgetc(fptr)) != EOF) {
+        characters++;
+        if (isspace(c)) {
+            in_word = 0;
+        } else if (!in_word) {
+            in_word = 1;
+            words++;
+        }
+    }
+    fclose(fptr);
+
+    // Display the number of words and characters
+    printf("The number of words in the file %s are: %d\n", filename, words);
+    printf("The number of characters in the file %s are: %d\n", filename, characters);
+
+    return 0;
 }
 
 // Program End

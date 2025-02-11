@@ -16,12 +16,26 @@
 
 // Header File
 #include <stdio.h>
+#include <ctype.h>  
 
-// Main Function
-int main()
-{
-     
-     return 0;
+// Function to toggle case
+void toggle_case(char *str) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isupper(str[i])) {  
+            str[i] = tolower(str[i]);  
+        } else if (islower(str[i])) {  
+            str[i] = toupper(str[i]); 
+        }
+    }
+}
+
+// Main function
+int main() {
+    char str[] = "RUggEd bOaRD";
+    printf("given string is : %s\n", str);
+    toggle_case(str);
+    printf("the toggle case is : %s\n", str);
+    return 0;
 }
 
 // Program End
